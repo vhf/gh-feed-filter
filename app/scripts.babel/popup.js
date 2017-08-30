@@ -83,7 +83,7 @@ const deleteEvent = (event) => {
   event.preventDefault();
   const target = event.target;
   const repoSpan = target.parentNode.getElementsByClassName('repo')[0];
-  const repo = repo.getElementsByClassName('.repoName')[0].innerText;
+  const repo = repoSpan.getElementsByClassName('repoName')[0].innerText;
   const li = repoSpan.parentNode;
   triggers.forEach((trigger) => {
     localStorage.removeItem(`${repo}/${trigger.className}`);
